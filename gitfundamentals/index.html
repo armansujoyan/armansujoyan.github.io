@@ -1,16 +1,255 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <title>Arman Sujoyan</title>
+<html lang="en">
+  <!--
+       The MIT License (MIT)
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-</head>
+       Copyright (c) 2015 Tom Panning
 
-<body>
-  <header>
-      <h1>Welcome to my demo page!</h1>
-  </header>
-</body>
+       Permission is hereby granted, free of charge, to any person obtaining a copy
+       of this software and associated documentation files (the "Software"), to deal
+       in the Software without restriction, including without limitation the rights
+       to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+       copies of the Software, and to permit persons to whom the Software is
+       furnished to do so, subject to the following conditions:
 
+       The above copyright notice and this permission notice shall be included in
+       all copies or substantial portions of the Software.
+
+       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+       IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+       FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+       AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+       LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+       THE SOFTWARE.
+     -->
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+      .footer {
+          position: absolute;
+          bottom: 1em;
+          left: 1em;
+          font-size: 16px !important;
+        }
+        .reveal .slides section img { background:none; border:none; box-shadow:none; }
+    </style>
+    <title>
+      Git Fundamentals
+    </title>
+    <meta name="author" content="Arman Sujoyan">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css"
+    id="theme">
+
+    <!-- href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" -->
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement('link');
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match(/print-pdf/gi)
+	      ?  'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css'
+	       : 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/paper.css';
+     document.getElementsByTagName('head')[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+      
+        <section data-markdown>
+          <script type="text/template">
+## Welcome to GIT fundamentals
+
+- A stupid content tracker
+          </script>
+        </section>
+
+        <section>  
+<h3>The mystique black screen</h3>
+<p class="fragment">Terminal</p>
+<p class="fragment fade-up">
+  <span class="fragment highlight-red">CLI</span>
+</p>
+        </section>
+
+        <section>
+          <h2>Demistified</h2s>
+          <h5>Some basic commands</h5>
+          <ul class="fragment">
+            <li>pwd - <span class="fragment fade">Print Working Directory</span></li>
+            <li>cd - <span class="fragment fade">Change Directory</span></li>
+            <li>mkdir - <span class="fragment fade">MaKe DIRectory</span></li>
+            <li>rm - <span class="fragment fade">Remove Directory</span></li>
+            <li>mv - <span class="fragment fade">Move Directory</span></li>
+            <li>cp - <span class="fragment fade">Copy Directory</span></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Some more commands</h3>
+          <ul class="fragment">
+            <li>cat - <span class="fragment fade"> Print Content</span></li>
+            <li>touch - <span class="fragment fade"> Create file</span></li>
+            <li>echo - <span class="fragment fade"> Print To Terminal </span></li>
+            <li>ls -la - <spam class="fragment fade">List all files in directory</spam></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What is VCS?</h2>
+          <h5>A Version Control System</h5>
+        </section>
+
+        <section>
+          <h2>Types of VCS's</h2>
+          <ul>
+            <li class="fragment">Local <span class="fragment">(RCS)</span></li>
+            <li class="fragment">Centralized <span class="fragment">(CVS,VSS,SVN)</span></li>
+            <li class="fragment">Distributed <span class="fragment">(<span class="fragment highlight-red">Bazaar</span>,GIT)</span></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>GIT</h1>
+          <img src="./Git-Icon-1788C.png" height="100px" width="100px">
+        </section>
+
+        <section>
+          <h4>Installation</h4>
+          <table>
+            <tr>
+              <td>
+                Windows
+              </td>
+              <td>
+                Download and install
+              </td>
+            </tr>
+             <tr>
+              <td>
+                MAC
+              </td>
+              <td>
+                brew install git
+              </td>
+            </tr>
+             <tr>
+              <td>
+                Linux
+              </td>
+              <td style="vertical-align: middle">
+                <ul>
+                  <li>apt get-install git-core</li>
+                  <li>yum install git-core</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>Configuration</h2>
+          <h5>3 Levels</h5>
+          <ul>
+            <li>System</li>
+            <li>User</li>
+            <li>Repository</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Config commands</h2>
+          <h4>git config --(level)</h4>
+          <ul>
+            <li>user.name</li>
+            <li>user.email</li>
+            <li>help.autocorrect</li>
+            <li>color.ui</li>
+            <li>core.editor</li>
+            <li class="fragment">--list | see all the configs</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How it works?</h2>
+            <section>
+              <img src="./index1@2x.png">
+            </section>
+            <section>
+              <img src="./staging.png">
+            </section>
+            <section>
+              <img src="./lifecycle.png"
+            </section>
+        </section>
+
+        <section>
+          <h2>Working locally with git</h2>
+          <h5 class="fragment highlight-red">LIVE CODING TIME</h5>
+        </section>
+
+        <section>
+          <h2>Working remotely with git</h2>
+          <h5 class="fragment highlight-red">LIVE CODING TIME</h5>
+        </section>
+
+      </div>
+      <footer class="footer">
+          Arman Sujoyan | Fall 2017
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+    <script>
+     // Full list of configuration options available at:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+       controls: true,
+       progress: true,
+       history: true,
+       center: true,
+       transitionSpeed:'slow',
+       previewLinks:false,
+       transition: 'slide',
+       slideNumber: true,
+       dependencies: [
+	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+	   condition: function() { return !document.body.classList; } },
+	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+	   async: true,
+	   condition: function() { return !!document.querySelector( 'pre code' ); },
+	   callback: function() { hljs.initHighlightingOnLoad(); } },
+	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+       ]
+     });
+    </script>
+  </body>
 </html>
