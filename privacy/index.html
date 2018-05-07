@@ -178,6 +178,46 @@
         </section>
 
         <section>
+          <h1>Most common encryption algorithm.</h1>
+          <h3>RSA (Rivest–Shamir–Adleman)</h3>
+        </section>
+
+        <section>
+          <h3>
+            The problem was creating a one way function that cannot
+            be inverted and they did it!
+          </h3>
+          <p class="fragment fade">
+            They actually take the exponent of a number and then modulo it with prime number.
+          </p>
+        </section>
+
+        <section>
+          <h2>More detailed.</h2>
+          <ul>
+            <li>Choose two distinct prime numbers p and q.</li>
+            <li>Compute n = pq.
+              <ul>
+                <li>n is used as the modulus for both the public and private keys. Its length, usually expressed in bits, is the key length.</li>
+              </ul>
+            </li>
+            <li>Compute λ(n) = lcm(λ(p), λ(q)) = lcm(p − 1, q − 1). This number is kept private.</li>
+            <li>Choose an integer e such that 1 < e < λ(n) and gcd(e, λ(n)) = 1; i.e., e and λ(n) are coprime.</li>
+            <li>Determine d as d ≡ e−1 (mod λ(n)); i.e., d is the modular multiplicative inverse of e (modulo λ(n))</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Are there other algorithms?</h2>
+          <p class="fragment fade">Yes there are, and a better one is ED25519.</p>
+        </section>
+
+        <section>
+          <h2>They are shorter 256bit, but they are harder to break. Why?</h2>
+          <p class="fragment fade">Because they use Eliptic curves.</p>
+        </section>
+
+        <section>
           <h2>Proxy Servers and chaining.</h2>
           <h5>Be anonymous!</h5>
         </section>
