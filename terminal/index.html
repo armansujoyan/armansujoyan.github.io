@@ -43,6 +43,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shotrcut icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme">
 
@@ -221,6 +222,10 @@ $ cd ..
 $ mkdir MyPrettyDirectory
 $ cp MyDirectoryName/myCustomFile.js MyPrettyDirectory/
                 </code></pre>
+                <pre><code>
+$ cp -i # Interactivly copy
+$ cp -r # Recursive copy
+                </code></pre>
             </section>
 
             <section>
@@ -269,6 +274,23 @@ $ rm -r [some-dir-name] # R stands for recursive
             </section>
 
             <section>
+                <h3>grep</h3>
+                <h4>Search inside the files</h4>
+                <p>grep [OPTIONS] PATTERN [FILE...]</p>
+            </section>
+
+            <section>
+                <h3>grep examples</h3>
+                <pre><code>
+$ grep -B5 "the living" gettysburg-address.txt        # show all matches, and five lines before each match
+$ grep -A10 "the living" gettysburg-address.txt       # show all matches, and ten lines after each match
+$ grep -B5 -A5 "the living" gettysburg-address.txt    # five lines before and ten lines after
+                </code></pre>
+                <pre class="fragment fade"><code>$ echo "paranoid schizophrenic walks into a bar" | grep bar</code></pre>
+                <p></p>
+            </section>
+
+            <section>
                 <h2>Do I have to remember all commands?</h2>
                 <p class="fragment fade">Not really</p>
                 <p class="fragment fade">Just learn to read instructions</p>
@@ -284,6 +306,42 @@ $ rm -r [some-dir-name] # R stands for recursive
                 <h4>Something useful</h4>
                 <p>!!</p>
                 <p class="fragment fade">Execute last command</p>
+            </section>
+
+            <section>
+                <h3>Other common commands</h3>
+                <ul>
+                    <li>head</li>
+                    <li>tail <span class="fragment highlight-blue">[-f]</span></li>
+                    <li>sort</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Shortcuts you don't want to forget</h4>
+                <ul>
+                    <li>Ctr+R - Search in previous commands</li>
+                    <li>Ctr+L + Clear the Terminal</li>
+                    <li>Ctrl+Shift+C - Copy from terminal</li>
+                    <li>Ctrl+Shift+V - Paste into terminal</li>
+                    <li>Ctrl+W - Cut last word into <span class="fragment highlight-red">special</span> clipboard</li>
+                    <li>Ctrl+U - Cut the line into <span class="fragment highlight-red">special</span> clipboard</li>
+                    <li>Ctrl+y - Paste from the same <span class="fragment highlight-red">special</span> clipboard</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Pipes</h3>
+                <p>| - Pass one's standard output to standard input</p>
+            </section>
+
+            <section>
+                <h3>> | >></h3>
+                <p>Writing output to file</p>
+                <pre class="fragment fades"><code>
+$ echo "Houston, we have a problem." > apollo13byebye.txt
+$ echo "..." >> apollo13byebye.txt
+                </code></pre>
             </section>
 
             <section>
