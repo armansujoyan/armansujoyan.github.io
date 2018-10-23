@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<!--
+        The MIT License (MIT)
+
+        Copyright (c) 2015 Tom Panning
+
+            Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        -->
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        .footer {
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+            font-size: 16px !important;
+        }
+        .reveal .slides section img { background:none; border:none; box-shadow:none; }
+    </style>
+    <title>
+        Terminal Basics
+    </title>
+    <meta name="author" content="Arman Sujoyan">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme">
+
+    <!-- href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" -->
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi)
+	        ?  'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css'
+	        : 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <section data-markdown>
+                <script type="text/template">
+                    ## Basics of Terminal
+                    Demistifying black screens
+                </script>
+            </section>
+
+            <section>
+                <h3>The mystique black screen</h3>
+                <p class="fragment">Terminal</p>
+                <p class="fragment fade-up">
+                    <span class="fragment highlight-red">CLI</span>
+                </p>
+            </section>
+
+            <section>
+                <h2>Demistified</h2s>
+                    <h5>Some basic commands</h5>
+                    <ul class="fragment">
+                        <li>pwd - <span class="fragment fade">Print Working Directory</span></li>
+                        <li>cd - <span class="fragment fade">Change Directory</span></li>
+                        <li>mkdir - <span class="fragment fade">MaKe DIRectory</span></li>
+                        <li>rm - <span class="fragment fade">Remove Directory</span></li>
+                        <li>mv - <span class="fragment fade">Move Directory</span></li>
+                        <li>cp - <span class="fragment fade">Copy Directory</span></li>
+                    </ul>
+            </section>
+
+            <section>
+                <h3>Some more commands</h3>
+                <ul class="fragment">
+                    <li>cat - <span class="fragment fade"> Print Content</span></li>
+                    <li>touch - <span class="fragment fade"> Create file</span></li>
+                    <li>echo - <span class="fragment fade"> Print To Terminal </span></li>
+                    <li>ls -la - <spam class="fragment fade">List all files in directory</spam>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>cd</h2>
+                <h3>Change Directory</h3>
+                <p>cd [Options] [Directory]</p>
+            </section>
+
+            <section>
+                <h2>cd Examples</h2>
+                <pre><code data-trim data-noescape>
+$ cd /usr/local/sybase
+$ pwd
+                </code></pre>
+                <pre class="fragment fade"><code data-trim data-noescape>
+$ cd /var/log
+$ pwd
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>cd Examples</h2>
+                <h3>Quick return to previous path</h3>
+                <pre><code data-trim data-noescape>
+$ cd -
+                </code></pre>
+                <h3>Get one directory up</h3>
+                <pre><code data-trim data-noescape>
+$ cd ..
+$ cd ~
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>pwd</h2>
+                <h3>Print Working Directory</h3>
+                <p>pwd [options]</p>
+                <p>Just print's current working directories path</p>
+            </section>
+
+            <section>
+                <h2>ls</h2>
+                <h3>List Directory Content</h3>
+                <p>ls [options] [file]</p>
+            </section>
+
+            <section>
+                <h2>ls options</h2>
+                <pre><code data-trim data-noescape="">
+-a, --all   List all entries including those starting with a dot.
+-l   Use a long listing format
+-lh   Same as -l, but shows sizes in human readable format.
+-F     Add the ‘/’ Character at the end each directory.
+-r  Display files and directories in reverse order.
+-R  Recursively list Sub-Directories
+-ltr Shows latest modification file or directory date as last.
+-lS  Displays file size in order, will display big in size first.
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>ls examples</h2>
+                <pre><code>
+$ ls ~
+$ ls -al
+# List the directories in the current directory:
+$ ls -d */
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>mkdir</h2>
+                <h3>Make directory</h3>
+                <p>mkdir [Options] folder...</p>
+            </section>
+
+            <section>
+                <h2>mkdir Example</h2>
+                <pre><code>
+$ cd ~/Documents
+$ mkdir MyDirectoryName
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>touch</h2>
+                <h3>Make a file</h3>
+                <p>touch [OPTION]... FILE...</p>
+            </section>
+
+            <section>
+                <h2>touch example</h2>
+                <pre><code>
+$ cd MyDirectoryName
+$ touch myCustomFile.js
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>cp</h2>
+                <h3>Copy</h3>
+                <p>cp [OPTION]... [-T] SOURCE DEST</p>
+            </section>
+
+            <section>
+                <h2>Example of cp</h2>
+                <pre><code>
+$ cd ..
+$ mkdir MyPrettyDirectory
+$ cp MyDirectoryName/myCustomFile.js MyPrettyDirectory/
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>rm</h2>
+                <h3>Remove something</h3>
+                <p>rm - remove files or directories</p>
+            </section>
+
+            <section>
+                <h2>rm examples</h2>
+                <pre><code>
+$ rm MyPrettyDirectory/myCustomFile.js
+$ rm -r [some-dir-name] # R stands for recursive
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>mv</h2>
+                <h3>Move something</h3>
+                <p>mv [OPTION]... [-T] SOURCE DEST</p>
+            </section>
+
+            <section>
+                <h2>cat myCustomFile.js</h2>
+                <h3>Print content of the file into terminal</h3>
+                <p> cat [OPTION]... [FILE]...</p>
+            </section>
+
+            <section>
+                <h2>less</h2>
+                <h3>A better way to view content of the file</h3>
+                <p>Doesn't have to read all content of the files</p>
+            </section>
+
+            <section>
+                <h2>less</h2>
+                <p>If you have a larger file to view you can use less.</p>
+            </section>
+
+            <section>
+                <h2>apt-get</h2>
+                <p>Installing some packages</p>
+                <pre><code>
+                    apt-get install sl
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Do I have to remember all commands?</h2>
+                <p class="fragment fade">Not really</p>
+                <p class="fragment fade">Just learn to read instructions</p>
+            </section>
+
+            <section>
+                <h2>man</h2>
+                <h3>Shows the manual entry for the command</h3>
+                <p>man [command]</p>
+            </section>
+
+            <section>
+                <h4>Something useful</h4>
+                <p>!!</p>
+                <p class="fragment fade">Execute last command</p>
+            </section>
+
+            <section>
+                <h2>Thank you!</h2>
+                <h3 class="fragment highlight-red">No more misteries.</h3>
+            </section>
+        </div>
+        <footer class="footer">
+            Arman Sujoyan | Fall 2018
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transitionSpeed: 'slow',
+            previewLinks: false,
+            transition: 'slide',
+            slideNumber: true,
+            dependencies: [{
+                    src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.querySelector('pre code');
+                    },
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js',
+                    async: true
+                },
+                {
+                    src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js',
+                    async: true
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>
