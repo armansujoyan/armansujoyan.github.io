@@ -43,6 +43,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shotrcut icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
     <link rel="stylesheet"
@@ -145,7 +146,7 @@
                 Download and install
               </td>
             </tr>
-             <tr>
+            <tr>
               <td>
                 MAC
               </td>
@@ -153,13 +154,13 @@
                 brew install git
               </td>
             </tr>
-             <tr>
+            <tr>
               <td>
                 Linux
               </td>
               <td style="vertical-align: middle">
                 <ul>
-                  <li>apt get-install git-core</li>
+                  <li>apt-get install git</li>
                   <li>yum install git-core</li>
                 </ul>
               </td>
@@ -276,6 +277,27 @@
         </section>
 
         <section>
+          <h3>Git workflows</h3>
+          <ul>
+            <li>Centralized</li>
+            <li>Feature branch</li>
+            <li>Gitflow</li>
+            <li>Forking</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Feature branch</h3>
+          <img src="./feature_branch.svg" class="stretch"/>
+        </section>
+
+
+        <section>
+            <h3>Gitflow</h3>
+            <img src="./gitflow.svg" class="stretch"/>
+          </section>
+
+        <section>
           <img src="./Thats_all_folks.svg" class="stretch">
         </section>
 
@@ -283,7 +305,7 @@
           <h2>May the GIT be with you.</h2>
           <img src="./Git-Icon-1788C.png" height="100px" width="100px">
         </section>
-        
+
       </div>
       <footer class="footer">
           Arman Sujoyan | Fall 2017
@@ -294,32 +316,32 @@
     <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
 
     <script>
-     // Full list of configuration options available at:
-     // https://github.com/hakimel/reveal.js#configuration
-     Reveal.initialize({
-       controls: true,
-       progress: true,
-       history: true,
-       center: true,
-       transitionSpeed:'slow',
-       previewLinks:false,
-       transition: 'slide',
-       slideNumber: true,
-       dependencies: [
-	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
-	   condition: function() { return !document.body.classList; } },
-	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
-	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
-	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
-	   async: true,
-	   condition: function() { return !!document.querySelector( 'pre code' ); },
-	   callback: function() { hljs.initHighlightingOnLoad(); } },
-	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
-	 { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
-       ]
-     });
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transitionSpeed:'slow',
+      previewLinks:false,
+      transition: 'slide',
+      slideNumber: true,
+      dependencies: [
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+    condition: function() { return !document.body.classList; } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+    condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+    condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+    async: true,
+    condition: function() { return !!document.querySelector( 'pre code' ); },
+    callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+      ]
+    });
     </script>
   </body>
 </html>
