@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <style>
+      .footer {
+          position: absolute;
+          bottom: 1em;
+          left: 1em;
+          font-size: 16px !important;
+        }
+        .reveal .slides section img { background:none; border:none; box-shadow:none; }
+    </style>
+    <title>
+      HTML/CSS
+    </title>
+    <meta name="author" content="Arman Sujoyan">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="shotrcut icon" type="image/png" href="./favicon.png" />
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css"
+    id="theme">
+
+    <!-- href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/black.css" -->
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi)
+      ?  'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css'
+        : 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+            ## Welcome to HTML/CSS
+          </script>
+        </section>
+
+        <section>
+          <h2>Arman Sujoyan</h2>
+          <h6>Software Engineer</h6>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li><a href="https://github.com/armansujoyan">Github</a></li>
+            <li><a href="https://www.facebook.com/arman.sujoyan.1">Facebook</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>HTML</h3>
+            <p>
+              Building Blocks -> Tags -> Paired && Unpaired
+            </p>
+        </section>
+
+        <section>
+          <h3>Tags</h3>
+          <pre data-trim data-noescape class="hljs xml">
+            <code>
+              &lt;p [attr]=&quot;value&quot; [attr]=&quot;value&quot;&gt;&lt;/p&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>Structure</h3>
+          <pre data-trim data-noescape class="hljs xml">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot;
+      content=&quot;width=device-width,initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Game of Thrones&lt;/title&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;winter, khaleesi, stark&quot;&gt;
+    &lt;style&gt;...some_css...&lt;/style&gt;
+    &lt;script&gt;...some_js...&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>Head</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>title</li>
+            <li>meta</li>
+            <li>script</li>
+            <li>base</li>
+            <li>style</li>
+            <li>link</li>
+            <li>noscript</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Display Types</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>Block</li>
+            <li>Inline</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Global Attributes</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>id</li>
+            <li>style</li>
+            <li>data-*</li>
+            <li>draggable</li>
+            <li>dropzone</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Links</h3>
+          <pre data-trim data-noescape class="hljs xml">
+            <code>
+&lt;a href=&quot;http://www.simplytechnologies.net&quot;&gt;Simply Technologies&lt;/a&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>Link Attributes</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>href</li>
+            <li>target</li>
+            <li>title</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Images</h3>
+          <pre data-trim data-noescape class="hljs xml">
+            <code>
+&lt;img src=&quot;smiley.gif&quot; alt=&quot;Smiley face&quot;&gt;    
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>Forms</h3>
+          <a href="https://codepen.io/armansujoyan/pen/XWJybxZ" target="_blank">Example</a>
+        </section>
+
+        <section>
+          <h3>Iframe</h3>
+          <p>A tag used to display one web page in another</p>
+        </section>
+
+        <section>
+          <h3>HTML5</h3>
+          <p>Brings new horizons to HTML</p>
+        </section>
+
+        <section>
+          <h3>Web APIs</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>Canvas</li>
+            <li>Video</li>
+            <li>Audio</li>
+            <li>Semantic Tags</li>
+            <li>Geolocation</li>
+            <li>File API</li>
+            <li>Web Sockets</li>
+            <li>SVG</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Semantic Tags</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>header</li>
+            <li>nav</li>
+            <li>section</li>
+            <li>article</li>
+            <li>aside</li>
+            <li>figure</li>
+            <li>figcaption</li>
+            <li>footer</li>
+            <li>time</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>New input types</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>color</li>
+            <li>date</li>
+            <li>email</li>
+            <li>number</li>
+            <li>range</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>CSS</h3>
+          <p>Becoming stylish</p>
+          <p class="fragment">The horror of some developers</p>
+        </section>
+
+        <section>
+          <h3>Quick Recap</h3>
+        </section>
+
+        <section>
+          <h3>Selectors</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>.class</li>
+            <li>#id</li>
+            <li>p</li>
+            <li>div,p</li>
+            <li>div p</li>
+            <li>div>p</li>
+            <li>[attribute]</li>
+            <li>[attribute=value]</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Pseudo selectors</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>:active, :hover, :visited, :link</li>
+            <li>::after, ::before</li>
+            <li>:focus, :empty</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Background</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>color</li>
+            <li>position</li>
+            <li>repeat</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Text</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>text-align</li>
+            <li>text-decoration</li>
+            <li>color</li>
+            <li>line-height</li>
+            <li>text-transform</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Font</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>font-family</li>
+            <li>font-style</li>
+            <li>font-size</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Display</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>height, width</li>
+            <li>max,min</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Hiding</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>visibility: hidden</li>
+            <li>display: none</li>
+          </ul>
+        </section>
+
+        <section>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li><a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">Box Model</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_media_queries1" target="_blank">Media Queries</a></li>
+            <li><a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank" rel="noopener noreferrer">Positioning</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Flexbox</h3>
+          <p class="fragment">Saviour of the world</p>
+          <p class="fragment">Live coding</p>
+        </section>
+
+        <section>
+          <h3>Advanced CSS</h3>
+          <ul style="list-style-type: none; margin-left: 0; text-align: center;">
+            <li>Grid</li>
+            <li>Animations</li>
+            <li>Variables</li>
+            <li>Hardware Acceleration</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Thank you!</h3>
+        </section>
+      </div>
+      <footer class="footer">
+          Arman Sujoyan | Winter 2020
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      transitionSpeed:'slow',
+      previewLinks:false,
+      transition: 'slide',
+      slideNumber: true,
+      dependencies: [
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+    condition: function() { return !document.body.classList; } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+    condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+    condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+    async: true,
+    condition: function() { return !!document.querySelector( 'pre code' ); },
+    callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+  { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+      ]
+    });
+    </script>
+  </body>
+</html>
